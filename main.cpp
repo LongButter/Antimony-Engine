@@ -1,4 +1,4 @@
-#include "risk_event.cpp"
+#include "risk_event.hpp"
 #include <iostream>
 #include <ostream>
 #include <thread>
@@ -44,16 +44,16 @@ int main(){
 	if (command == 'r'){
 		RiskEvent* risk = new RiskEvent();
 		risk->user_input();
-		cout << "\nCalculating[.....]\r";
-		this_thread::sleep_for(chrono::milliseconds(50));
+		cout << "\nCalculating[.....]";
+		this_thread::sleep_for(chrono::milliseconds(300));
 		cout << "Calculating[*....]\r";
-		this_thread::sleep_for(chrono::milliseconds(50));
+		this_thread::sleep_for(chrono::milliseconds(400));
 		cout << "Calculating[**...]\r";
-		this_thread::sleep_for(chrono::milliseconds(50));
+		this_thread::sleep_for(chrono::milliseconds(500));
 		cout << "Calculating[***..]\r";
-		this_thread::sleep_for(chrono::milliseconds(50));
+		this_thread::sleep_for(chrono::milliseconds(600));
 		cout << "Calculating[****.]\r";
-		this_thread::sleep_for(chrono::milliseconds(200));
+		this_thread::sleep_for(chrono::milliseconds(650));
 		cout << "Calculating[*****]\n";
 
 	}
