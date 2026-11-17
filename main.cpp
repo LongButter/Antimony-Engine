@@ -44,15 +44,15 @@ int main(){
 	if (command == 'r'){
 		RiskEvent* risk = new RiskEvent();
 		risk->user_input();
-		cout << "\nCalculating[.....]";
+		cout << "\nCalculating[.....]\r" << flush;
 		this_thread::sleep_for(chrono::milliseconds(300));
-		cout << "Calculating[*....]\r";
+		cout << "Calculating[*....]\r" << flush;
 		this_thread::sleep_for(chrono::milliseconds(400));
-		cout << "Calculating[**...]\r";
+		cout << "Calculating[**...]\r" << flush;
 		this_thread::sleep_for(chrono::milliseconds(500));
-		cout << "Calculating[***..]\r";
+		cout << "Calculating[***..]\r" << flush;
 		this_thread::sleep_for(chrono::milliseconds(600));
-		cout << "Calculating[****.]\r";
+		cout << "Calculating[****.]\r" << flush;
 		this_thread::sleep_for(chrono::milliseconds(650));
 		cout << "Calculating[*****]\n";
 
