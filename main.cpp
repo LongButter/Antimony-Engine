@@ -65,6 +65,7 @@ int main(){
 
 	}
 	
+	this_thread::sleep_for(chrono::milliseconds(500));
 	cout << "\x1b[037m";
 	cout << "\x1b[2J";
 	cout << "\x1b[2H";
