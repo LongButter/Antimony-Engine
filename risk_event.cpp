@@ -93,14 +93,15 @@ RiskEvent::RiskEvent(string eventId, float probability, int impact, array<contro
 			float app;
 
 			cout << "\nEnter Risk Event Id: ";
-			cin >> id; // does not work when a white space is in buffer, only grabs before first whitespace
-			cin.ignore();
+			cin.ignore(); // ignores \n from old cin extraction
+			getline(cin, id);
 			cout << "\nEnter probability: ";
 			cin >> prob;
 			cout << "\nEnter impact: ";
 			cin >> imp;
 			new_risk_event.set_control();
 			cout << "\nEnter risk appetite: ";
+			cin >> app;
 			new_risk_event.set_event_id(id);
 			new_risk_event.set_probability(prob);
 			new_risk_event.set_impact(imp);
