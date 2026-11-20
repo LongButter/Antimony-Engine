@@ -49,7 +49,7 @@ int main(){
 	if (command == 'r'){
 		RiskEvent* risk = new RiskEvent();
 
-		risk->user_input();
+		risk->user_input(risk);
 		cout << "\nCalculating[.....]\r" << flush;
 		this_thread::sleep_for(chrono::milliseconds(300));
 		cout << "Calculating[*....]\r" << flush;
@@ -60,9 +60,16 @@ int main(){
 		this_thread::sleep_for(chrono::milliseconds(600));
 		cout << "Calculating[****.]\r" << flush;
 		this_thread::sleep_for(chrono::milliseconds(650));
-		cout << "Calculating[*****]\n";
+		cout << "Calculating[*****]";
+		cout << "\x1b[2J";
+		cout << "\x1b[2H";
+		cout << "\x1b[033m";
+		cout << risk->get_event_id();
+		cout << "\x1b[032m";
 		cout << "\nInherent Risk: ";
 		cout << risk->find_inherent_risk(risk);
+		cout << "\nResidual Risk: ";
+		cout << risk->find_residual_risk(risk);
 		cout << "\npress enter to exit...";
 		cin.ignore();
 		cin.get();

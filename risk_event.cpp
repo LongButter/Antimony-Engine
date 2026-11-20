@@ -84,9 +84,8 @@ RiskEvent::RiskEvent(string eventId, float probability, int impact, array<contro
 		}
 
 		// get user input
-		RiskEvent RiskEvent::user_input(){
-			
-			RiskEvent new_risk_event = RiskEvent();
+		void RiskEvent::user_input(RiskEvent* risk){
+																																																																			
 			string id;
 			float prob;
 			int imp;
@@ -99,14 +98,13 @@ RiskEvent::RiskEvent(string eventId, float probability, int impact, array<contro
 			cin >> prob;
 			cout << "\nEnter impact: ";
 			cin >> imp;
-			new_risk_event.set_control();
+			risk->set_control();
 			cout << "\nEnter risk appetite: ";
 			cin >> app;
-			new_risk_event.set_event_id(id);
-			new_risk_event.set_probability(prob);
-			new_risk_event.set_impact(imp);
-			new_risk_event.set_appetite(app);
+			risk->set_event_id(id);
+			risk->set_probability(prob);
+			risk->set_impact(imp);
+			risk->set_appetite(app);
 			
-			return new_risk_event;
 		}
 

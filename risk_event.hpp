@@ -26,7 +26,7 @@ class RiskEvent{
 		bool is_acceptable(RiskEvent* risk, float residual_risk);
 
 		// get user input
-		RiskEvent user_input();
+		void user_input(RiskEvent* risk);
 		
 		string get_event_id();
 		
